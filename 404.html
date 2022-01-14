@@ -5,11 +5,7 @@
             function ReadCookie() {
                var allcookies = document.cookie;
                document.write ("All Cookies : " + allcookies );
-               
-               // Get all the cookies pairs in an array
                cookiearray = allcookies.split(';');
-               
-               // Now take key value pair out of this array
                for(var i=0; i<cookiearray.length; i++) {
                   name = cookiearray[i].split('=')[0];
                   value = cookiearray[i].split('=')[1];
@@ -18,12 +14,7 @@
             }
          //-->
       </script>      
-   </head>
-   
-   <body>     
-      <form name = "myform" action = "">
-         <p> Click the following button and see the result:</p>
-         <input type = "button" value = "Get Cookie" onclick = "ReadCookie()"/>
-      </form>      
+   </head>     
+      <body onLoad="javascript:ReadCookie()" > 
    </body>
 </html>
